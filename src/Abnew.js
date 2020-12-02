@@ -5,12 +5,13 @@ import { ContractABI } from "./ContractABI";
 import "./App.css";
 
 
-const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+//const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+const web3 = new Web3(Web3.givenProvider);
 web3.eth.defaultAccount = web3.eth.accounts[0];
 
 const RemixContract = new web3.eth.Contract(
   ContractABI,
-  "0x5b97bE39e1660a232BECB2CB1C9378426093B46F"
+  "0x41297398c67b4e8f2f9a69a7d0d9ec91a00418f6"
 );
 
 function Abnew() {

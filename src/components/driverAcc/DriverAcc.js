@@ -4,12 +4,13 @@ import './DriverAcc.css'
 import Web3 from "web3";
 import { ContractABI } from "../../ContractABI";
 
-const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+//const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+const web3 = new Web3(Web3.givenProvider);
 web3.eth.defaultAccount = web3.eth.accounts[0];
 
 const RemixContract = new web3.eth.Contract(
   ContractABI,
-  "0x17d1567255be9E41351333E8261fc521aFFdBA27"
+  "0x41297398c67b4e8f2f9a69a7d0d9ec91a00418f6"
 );
 
 
